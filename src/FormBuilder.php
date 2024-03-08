@@ -7,6 +7,7 @@ namespace Droxnl\FormBuilder;
 use Droxnl\FormBuilder\Helpers\AbstractHelper;
 use Droxnl\FormBuilder\Validators\FormValidator;
 use Illuminate\Support\Facades\View;
+use InvalidArgumentException;
 
 class FormBuilder extends AbstractHelper
 {
@@ -73,7 +74,7 @@ class FormBuilder extends AbstractHelper
             ];
         }
 
-        throw new \InvalidArgumentException('Invalid form configuration');
+        throw new InvalidArgumentException('Invalid form configuration');
     }
 
     /**
